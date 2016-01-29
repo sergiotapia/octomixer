@@ -7,11 +7,11 @@ organizations. Just add it as a dependency and you're good to go!
 
 ## Getting Started
 
-TODO: I'll add a simple example app here, that uses the Octomix package.
+TODO: I'll add a simple example app here, that uses the Octomixer package.
 
 ## How does it work?
 
-Octomizer uses a headless browser to download the HTML source code for Github's
+Octomixer uses a headless browser to download the HTML source code for Github's
 various pages, then it scrapes the relevant information from it. In the end, you
 just receive a simple Elixir hash to save, write to a file, or whatever you'd
 like.

@@ -2,7 +2,8 @@
 # Docker Hub https://registry.hub.docker.com/_/debian/
 # Read more about containers on our dev center
 # http://devcenter.wercker.com/docs/containers/index.html
-box: debian
+box: appcues/elixir-dev
+
 # You can also use services such as databases. Read more on our dev center:
 # http://devcenter.wercker.com/docs/services/index.html
 # services:
@@ -21,6 +22,22 @@ build:
     # http://devcenter.wercker.com/docs/steps/index.html
   steps:
     - script:
-        name: echo
+        name: set env vars
         code: |
-          echo "hello world!"
+          export MIX_ENV=test
+
+    - script:
+        name: get and compile dependencies
+        code: |
+          cd $WERCKER_SOURCE_DIR
+          yes | mix do deps.get, deps.compile
+
+    - script:
+        name: compile
+        code: |
+          yes | mix compile
+
+    - script:
+        name: test
+        code: |
+          mix test            

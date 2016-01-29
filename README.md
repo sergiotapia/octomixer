@@ -1,5 +1,7 @@
 # Octomixer
 
+[![wercker status](https://app.wercker.com/status/ae681466f773dec15e249e853206b7da/m "wercker status")](https://app.wercker.com/project/bykey/ae681466f773dec15e249e853206b7da)
+
 Octomixer is the easiest way to find Github information on users and
 organizations. Just add it as a dependency and you're good to go!
 
